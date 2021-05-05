@@ -1,15 +1,12 @@
 <template>
     <div class="container">
-        <div class="flex flex-row">
+        <div class="flex flex-row w-4/5 mt-40 mx-auto">
 
-            <div  v-for="content in contents" :key="content.id">
-                <div class="title">
-                    {{content.type}}
-                </div>
-                <div class="content">
-                    {{content.description}}
-                </div>
-                <button class="border-red-500 border-2 rounded-full" type="button">Learn More</button>
+            <div class="single-card"  v-for="content in contents" :key="content.id">
+                 <img :src="getImage(content.logo)" alt="">
+                   <h1> {{content.type}}</h1>
+                   <p> {{content.description}}</p>
+                <button class="border-white-500 border-2 rounded-full" type="button">Learn More</button>
             </div>
 
         </div>
@@ -27,6 +24,11 @@ export default {
             contents: []
         }
     },
+    methods: {
+        getImage(path){
+            return require('@/assets/'+ path);
+        }
+    },
     mounted(){
         content.getContents(contents => {
             this.contents = contents
@@ -37,10 +39,39 @@ export default {
 </script>
 
 <style >
-    .title {
-        font-family: 'Big Shoulders Display', cursive;;
+    html,
+    body {
+        height: 100%;
     }
-    .content {
+
+    .container {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    h1 {
+          font-family: 'Big Shoulders Display', cursive;
+    }
+    
+    p {
         font-family: 'Lexend Deca', sans-serif;
+
     }
+
+    .single-card {
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    .single-card:nth-of-type(1){
+        background: hsl(31, 77%, 52%);
+    }
+
+    .single-card:nth-of-type(2) {
+        background: hsl(184, 100%, 22%);
+    }
+    .single-card:nth-of-type(3){
+        background: hsl(179, 100%, 13%);
+    }
+
+   
 </style>
