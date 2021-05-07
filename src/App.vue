@@ -6,6 +6,8 @@
 </template>
 
 <script>
+
+
 import cardcomponent from './components/CardsComponent.vue'
 import footinfo from './components/Footer.vue'
 

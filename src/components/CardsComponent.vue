@@ -1,9 +1,8 @@
 <template>
     <div class="container w-3/4 mx-auto ">
-        <div class="flex md:flex-row   flex-col p-3">
-
+        <div class="flex md:flex-row logo  flex-col p-3">
             <div class="flex flex-col  h-3/4  single-card p-8 " v-for="content in contents" :key="content.id">
-                    <div class="my-4">
+                    <div class="my-4 vehicle" >
                         <img :src="getImage(content.logo)" alt="">
                     </div>
                    <h1 class="text-4xl my-6"> {{content.type}}</h1>
@@ -12,13 +11,14 @@
                     <button class="text-xs py-1 px-4 text-white border-white-500 border-2 rounded-full bottom-0 justify-self-end hover:text-current" type="button">Learn More</button>
                    </div>
             </div>
-
         </div>
+    
     </div>
 </template>
 
 <script>
 
+import { gsap } from "gsap";
 import content from '@/api/cardcontent'
 
 export default {
@@ -31,13 +31,18 @@ export default {
     methods: {
         getImage(path){
             return require('@/assets/'+ path);
-        }
+
+        },
+
     },
-    mounted(){
+    mounted: function(){
         content.getContents(contents => {
             this.contents = contents
-            console.log(this.contents[0])
         })
+        gsap.to('.logo', { y: 100, duration: 3});
+        // gsap.to('.vehicle', { x: 50,delay:5, duration: 3});
+        gsap.to('.vehicle', {y:100, duration: 3});
+
     }
 }
 </script>
@@ -56,9 +61,8 @@ export default {
     h1 {
           font-family: 'Big Shoulders Display', cursive;
           color: hsl(0, 0%, 95%);
-
     }
-    
+
     .cards-para {
         font-family: 'Lexend Deca', sans-serif;
         color: hsla(0, 0%, 100%, 0.75);
