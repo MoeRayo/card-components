@@ -1,5 +1,5 @@
 <template>
-    <div class="container w-3/4 mx-auto">
+    <div class="container w-3/4 mx-auto ">
         <div class="flex md:flex-row   flex-col p-3">
 
             <div class="flex flex-col  h-3/4  single-card p-8 " v-for="content in contents" :key="content.id">
@@ -7,7 +7,7 @@
                         <img :src="getImage(content.logo)" alt="">
                     </div>
                    <h1 class="text-4xl my-6"> {{content.type}}</h1>
-                   <p class="mt-4 mb-12 text-sm"> {{content.description}}</p>
+                   <p class="mt-4 mb-12 text-sm cards-para"> {{content.description}}</p>
                    <div>
                     <button class="text-xs py-1 px-4 text-white border-white-500 border-2 rounded-full bottom-0 justify-self-end hover:text-current" type="button">Learn More</button>
                    </div>
@@ -42,10 +42,11 @@ export default {
 }
 </script>
 
-<style >
+<style>
     html,
     body {
         height: 100%;
+        background: hsla(179, 100%, 13%, 0.151);
     }
 
     .container {
@@ -58,7 +59,7 @@ export default {
 
     }
     
-    p {
+    .cards-para {
         font-family: 'Lexend Deca', sans-serif;
         color: hsla(0, 0%, 100%, 0.75);
     }
