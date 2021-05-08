@@ -1,7 +1,7 @@
 <template>
     <div>
         <footer>
-           <p> Challenge by <span> <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span> Coded by <span><a href="https://github.com/MoeRayo?tab=repositories" target="_blank">Moronfolu Olufunke</a>.</span>
+           <p class="text-xs"> Challenge by <span> <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span> Coded by <span><a href="https://github.com/MoeRayo?tab=repositories" target="_blank">Moronfolu Olufunke</a>.</span>
                
             </p>
         </footer>

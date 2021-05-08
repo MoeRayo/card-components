@@ -1,7 +1,7 @@
 <template>
     <div class="container w-3/4 mx-auto ">
-        <div class="flex md:flex-row logo  flex-col p-3">
-            <div class="flex flex-col  h-3/4  single-card p-8 " v-for="content in contents" :key="content.id">
+        <div class="flex md:flex-row card-wrapper flex-col p-3">
+            <div class="flex flex-col h-3/4  single-card p-8 " v-for="content in contents" :key="content.id">
                     <div class="my-4 vehicle" >
                         <img :src="getImage(content.logo)" alt="">
                     </div>
@@ -39,28 +39,20 @@ export default {
         content.getContents(contents => {
             this.contents = contents
         })
-        gsap.to('.logo', { y: 100, duration: 3});
-        // gsap.to('.vehicle', { x: 50,delay:5, duration: 3});
-        gsap.to('.vehicle', {y:100, duration: 3});
-
+        gsap.to('.card-wrapper', { y: 40, duration: 2});
     }
 }
 </script>
 
 <style>
-    html,
-    body {
-        height: 100%;
+    
+    .card-wrapper {
         background: hsla(179, 100%, 13%, 0.151);
     }
 
-    .container {
-        height: 100%;
-    }
-
     h1 {
-          font-family: 'Big Shoulders Display', cursive;
-          color: hsl(0, 0%, 95%);
+        font-family: 'Big Shoulders Display', cursive;
+        color: hsl(0, 0%, 95%);
     }
 
     .cards-para {
