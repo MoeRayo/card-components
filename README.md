@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Design preview](.src/assets/design-preview.png)
+![Design preview](./src/assets/design-preview.png)
 
 ### Links
 
