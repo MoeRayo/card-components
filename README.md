@@ -28,11 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Design preview](../assets/design-preview.png)
+![Design preview](./assets/design-preview.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](http://card-components.vercel.app/)
+- Live Site URL: [Cards component on Vercel](http://card-components.vercel.app/)
 
 ## My process
 
@@ -40,7 +40,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
-- [GSAP] (https://greensock.com/gsap/) - JS Animation
+- [GSAP](https://greensock.com/gsap/) - JS Animation
 - [Tailwind](https://tailwindcss.com/) - CSS framework
 - [Vue](https://vuejs.org/) - JS library
 
