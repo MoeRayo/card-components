@@ -1,7 +1,7 @@
 <template>
     <div class="container w-3/4 mx-auto ">
-        <div class="flex md:flex-row card-wrapper flex-col p-3">
-            <div class="flex flex-col h-3/4  single-card p-8 " v-for="content in contents" :key="content.id">
+        <div class="flex md:flex-row card-wrapper flex-col p-3 ">
+            <div class="flex flex-col h-3/4 single-card p-8 " v-for="content in contents" :key="content.id">
                     <div class="my-4 vehicle" >
                         <img :src="getImage(content.logo)" alt="">
                     </div>
