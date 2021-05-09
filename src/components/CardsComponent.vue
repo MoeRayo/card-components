@@ -1,14 +1,14 @@
 <template>
     <div class="container w-3/4 mx-auto ">
         <div class="flex md:flex-row lg:w-9/12 mx-auto card-wrapper flex-col p-3 ">
-            <div class="flex flex-col single-card p-8 rounded" v-for="content in contents" :key="content.id">
+            <div class="flex flex-col single-card p-9 rounded" v-for="content in contents" :key="content.id">
                     <div class="my-4 vehicle" >
                         <img :src="getImage(content.logo)" alt="">
                     </div>
                    <h1 class="text-4xl my-6"> {{content.type}}</h1>
                    <p class="mt-4 mb-20 text-sm cards-para"> {{content.description}}</p>
                    <div>
-                    <button class="text-xs py-3 px-5 text-white border-white-500 border-2 rounded-full bottom-0 justify-self-end hover:text-current" type="button">Learn More</button>
+                    <button class="text-xs py-3 px-5 text-white border-white-500 border-2 rounded-full bottom-0 self-end hover:text-current" type="button">Learn More</button>
                    </div>
             </div>
         </div>
