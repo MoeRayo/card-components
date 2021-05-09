@@ -1,6 +1,6 @@
 <template>
     <div class="container w-3/4 mx-auto ">
-        <div class="flex md:flex-row lg:w-9/12 mx-auto card-wrapper flex-col p-3 ">
+        <div class="flex md:flex-row lg:w-9/12 mx-auto flex-col p-3 ">
             <div class="flex flex-col single-card p-9 rounded" v-for="content in contents" :key="content.id">
                     <div class="my-4 vehicle" >
                         <img :src="getImage(content.logo)" alt="">
@@ -46,10 +46,7 @@ export default {
 
 <style>
     
-    .card-wrapper {
-        background: hsla(179, 100%, 13%, 0.151);
-    }
-
+    
     h1 {
         font-family: 'Big Shoulders Display', cursive;
         color: hsl(0, 0%, 95%);
